@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/bakery_info",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -46,6 +46,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/cake-by-htoo/",
               "budgets": [
                 {
                   "type": "initial",
@@ -72,6 +73,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+              "baseHref": "/cake-by-htoo/",
               "buildTarget": "bakery_info:build:production"
             },
             "development": {

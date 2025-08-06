@@ -1,0 +1,116 @@
+<div class="h-screen bg-cover bg-center bg-[url('/assets/images/bg-bakery.jpg')]" style="background-position: center -200px;">
+  <!-- White overlay for readability -->
+  <div class="min-h-screen bg-white/80 backdrop-blur-sm flex flex-col items-center justify-center px-6 py-12">
+    <div class="max-w-5xl w-full p-8 rounded-2xl shadow-lg bg-white/90">
+      
+      <!-- Title -->
+      <h1 class="text-5xl font-extrabold text-center text-pink-700 mb-4">Welcome to CAKE BY HTOO Bakery</h1>
+      <p class="text-lg text-gray-700 text-center mb-12">
+        At <span class="font-semibold text-pink-600">Cake By Htoo</span>, baking is more than a craft — it’s our way of sharing happiness.
+        From soft, fluffy cakes to irresistible desserts, we bake with love and the finest ingredients.
+      </p>
+
+      <!-- Image + Mission -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="/assets/images/cake2.jpg" alt="Our Bakery" class="rounded-2xl shadow-xl border-4 border-pink-300">
+
+        <div>
+          <h2 class="text-3xl font-semibold text-pink-700 mb-4">Our Mission</h2>
+          <p class="text-gray-700 mb-6">
+            To make every occasion sweeter with our freshly baked treats. Whether it’s a celebration,
+            a cozy afternoon snack, or a special gift, our bakery is here to make your moments memorable.
+          </p>
+          <a routerLink="/contact" 
+            class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-full shadow-lg transition">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Specialties Section -->
+      <div class="mt-16">
+        <h2 class="text-3xl font-semibold text-center text-pink-700 mb-8">Our Specialties</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <img src="/assets/images/bg photo2.jpg" class="h-28 w-full object-cover rounded-md mb-3" alt="Cakes">
+            <h3 class="text-lg font-semibold text-pink-700">Cakes</h3>
+          </div>
+          <div class="p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <img src="/assets/images/icecream1.jpg" class="h-28 w-full object-cover rounded-md mb-3" alt="Pastries">
+            <h3 class="text-lg font-semibold text-pink-700">ICE CREAM</h3>
+          </div>
+          <div class="p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <img src="/assets/images/tiarmisu.jpg" class="h-28 w-full object-cover rounded-md mb-3" alt="Desserts">
+            <h3 class="text-lg font-semibold text-pink-700">Desserts</h3>
+          </div>
+          <div class="p-4 bg-white rounded-xl shadow hover:shadow-lg transition">
+            <img src="/assets/images/drinks.jpg" class="h-28 w-full object-cover rounded-md mb-3" alt="Drinks">
+            <h3 class="text-lg font-semibold text-pink-700">Drinks</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <!--location section--->
+      <!-- Location Section -->
+<div class="mt-16">
+  <h2 class="text-3xl font-semibold text-center text-pink-700 mb-8">Visit Our Bakery</h2>
+
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <!-- Shop Photo -->
+    <img src="/assets/images/htoolocation10.jpg" alt="Our Shop" class="rounded-2xl shadow-lg border-4 border-pink-300">
+
+    <!-- Address & Map -->
+    <div>
+      <h3 class="text-2xl font-semibold text-pink-700 mb-4">Our Location</h3>
+      <p class="text-lg text-gray-700 mb-2">
+        <span class="font-semibold text-pink-600">Cake By Htoo Bakery</span><br>
+        123 Sweet Street, Bakery Town
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        Call us: <span class="font-semibold text-pink-600">+123-456-7890</span>
+      </p>
+
+      <!-- Embedded Google Map -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=YOUR_MAP_CODE" 
+        width="100%" height="250" 
+        class="rounded-xl shadow border border-pink-300"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+   <!-- Gallery Section -->
+  <div class="mt-16">
+    <h3 class="text-2xl font-semibold text-center text-pink-700 mb-6">Our Bakery in Pictures</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="/assets/images/htoolocation1.jpg" (click)="openImage('/assets/images/htoolocation1.jpg')" class="rounded-lg shadow-md object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+      <img src="/assets/images/htoolocation2.jpg" (click)="openImage('/assets/images/htoolocation2.jpg')" class="rounded-lg shadow-md object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+      <img src="/assets/images/htoolocation3.jpg" (click)="openImage('/assets/images/htoolocation3.jpg')" class="rounded-lg shadow-md object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+      <img src="/assets/images/htoolocation5.jpg" (click)="openImage('/assets/images/htoolocation5.jpg')" class="rounded-lg shadow-md object-cover w-full h-48 hover:scale-105 transition-transform duration-300">
+      <img src="/assets/images/htoolocation9.jpg" (click)="openImage('/assets/images/htoolocation9.jpg')" class="rounded-lg shadow-md object-cover w-full h-48  hover:scale-105 transition-transform duration-300">
+       <img src="/assets/images/htoolocation7.jpg" (click)="openImage('/assets/images/htoolocation7.jpg')" class="rounded-lg shadow-md object-cover w-full h-48  hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+ 
+<!-- Image Modal -->
+<div *ngIf="selectedImage" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+  <div class="relative">
+    <img [src]="selectedImage" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg">
+    <button (click)="closeImage()" 
+            class="absolute top-2 right-2 bg-pink-600 text-white px-3 py-1 rounded-full shadow hover:bg-pink-700">
+      ✕
+    </button>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
